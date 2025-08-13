@@ -1,0 +1,20 @@
+* {
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
