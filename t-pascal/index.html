@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triángulo de Pascal - Desarrollo de Binomios</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>Triángulo de Pascal - Desarrollo de Binomios</h1>
+
+    <div class="controls">
+      <label for="variable1">Primer término del binomio (a):</label>
+      <input type="text" id="variable1" value="a" />
+
+      <label for="variable2">Segundo término del binomio (b):</label>
+      <input type="text" id="variable2" value="b" />
+
+      <label for="exponente">Exponente (n):</label>
+      <input type="number" id="exponente" min="0" max="15" value="4" />
+
+      <button onclick="generarTriangulo()">
+        Generar Triángulo y Desarrollo
+      </button>
+    </div>
+
+    <div class="pascal-container" id="pascalContainer"></div>
+
+    <div class="binomial-development" id="binomialDevelopment"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

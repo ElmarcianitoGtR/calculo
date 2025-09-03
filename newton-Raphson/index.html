@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método Newton-Raphson</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Método Newton-Raphson</h1>
+
+      <div class="input-group">
+        <label for="polynomial"
+          >Ingresa los coeficientes del polinomio (separados por comas, de mayor
+          a menor grado):</label
+        >
+        <input
+          type="text"
+          id="polynomial"
+          placeholder="Ejemplo: 1, -6, 11, -6 (para x³ - 6x² + 11x - 6)"
+          style="width: 100%"
+        />
+      </div>
+      <div class="input-group">
+        <label for="initialGuess">Valor inicial para buscar raíces:</label>
+        <input type="number" id="initialGuess" value="0" />
+      </div>
+
+      <button id="calculate">Calcular Raíces</button>
+
+      <div id="results">
+        <h2>Resultados:</h2>
+        <div id="roots-container"></div>
+        <div id="error-message" class="error"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
