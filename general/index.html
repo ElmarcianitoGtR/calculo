@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formula general</title>
     <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="../bar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="nav-button" id="menuBtn" onclick="window.location.href = '../index.html'">
+            <i class="fas fa-bars"></i>
+            <span>Menú</span>
+        </button>
+        
+        <div class="logo">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+            <span class="logo-text">RAFAX</span>
+        </div>
+        
+        <button class="nav-button" id="profileBtn" onclick="window.location.href = '../main.html'">
+            <i class="fas fa-user"></i>
+            <span>Perfil</span>
+        </button>
+    </nav>
+
     <form>
+      <h1>Formula</h1><b>general</b>
       <label for="a">Escribe el valor de a=</label>
       <input type="number" name="" id="a" />
       <label for="b">Escribe el valor de b=</label>

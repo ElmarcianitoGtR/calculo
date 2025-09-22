@@ -10,11 +10,8 @@ function generarTriangulo() {
     return;
   }
 
-  // Generar el triángulo de Pascal hasta el nivel n
   const triangulo = generarTrianguloPascal(n);
 
-  // Mostrar el triángulo
-  mostrarTrianguloPascal(triangulo);
 
   // Mostrar el desarrollo del binomio
   mostrarDesarrolloBinomio(triangulo[n], a, b, n);
@@ -40,46 +37,12 @@ function generarTrianguloPascal(n) {
   return triangulo;
 }
 
-function mostrarTrianguloPascal(triangulo) {
-  const container = document.getElementById("pascalContainer");
-  container.innerHTML = "";
-
-  triangulo.forEach((fila, i) => {
-    const rowDiv = document.createElement("div");
-    rowDiv.className = "pascal-row";
-
-    // Añadir espacios para centrar
-    for (let s = 0; s < triangulo.length - i - 1; s++) {
-      const space = document.createElement("div");
-      space.style.width = "40px";
-      space.style.margin = "0 5px";
-      rowDiv.appendChild(space);
-    }
-
-    fila.forEach((num) => {
-      const cell = document.createElement("div");
-      cell.className = "pascal-cell";
-      cell.textContent = num;
-
-      // Resaltar la fila correspondiente al exponente seleccionado
-      if (i === triangulo.length - 1) {
-        cell.style.backgroundColor = "#3498db";
-        cell.style.color = "white";
-      }
-
-      rowDiv.appendChild(cell);
-    });
-
-    container.appendChild(rowDiv);
-  });
-}
-
 function mostrarDesarrolloBinomio(coeficientes, a, b, n) {
   const developmentDiv = document.getElementById("binomialDevelopment");
   developmentDiv.innerHTML = "";
 
   const title = document.createElement("h2");
-  title.textContent = `Desarrollo de (${a} + ${b})^${n}:`;
+  title.textContent = `Desarrollo`;
   developmentDiv.appendChild(title);
 
   const development = document.createElement("p");
@@ -100,7 +63,6 @@ function mostrarDesarrolloBinomio(coeficientes, a, b, n) {
     // No mostrar coeficiente 1 (excepto al inicio)
     const mostrarCoeficiente = coeficiente !== 1 || k === 0;
 
-    // Construir término
     let termino = "";
 
     if (mostrarCoeficiente) {
@@ -121,10 +83,8 @@ function mostrarDesarrolloBinomio(coeficientes, a, b, n) {
       }
     }
 
-    // Resaltar el término actual
     termino = `<span class="highlight">${termino}</span>`;
 
-    // Añadir signo + si no es el primer término
     if (k > 0) {
       termino = " + " + termino;
     }
@@ -135,13 +95,6 @@ function mostrarDesarrolloBinomio(coeficientes, a, b, n) {
   development.innerHTML = desarrolloTexto;
   developmentDiv.appendChild(development);
 
-  // Explicación
-  const explanation = document.createElement("p");
-  explanation.innerHTML = `Los coeficientes <span class="highlight">${coeficientes.join(
-    ", "
-  )}</span> corresponden a la fila ${n} del Triángulo de Pascal.`;
-  developmentDiv.appendChild(explanation);
 }
 
-// Generar al cargar la página con valores por defecto
 window.onload = generarTriangulo;

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ley de Signos de Descartes</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../bar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="nav-button" id="menuBtn" onclick="window.location.href = '../index.html'">
+            <i class="fas fa-bars"></i>
+            <span>Menú</span>
+        </button>
+        
+        <div class="logo">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+            <span class="logo-text">RAFAX</span>
+        </div>
+        
+        <button class="nav-button" id="profileBtn" onclick="window.location.href = '../main.html'">
+            <i class="fas fa-user"></i>
+            <span>Perfil</span>
+        </button>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Ley de Signos de Descartes</h1>
+        </header>
+        
+        <div class="content">
+            <div class="input-section">
+                <h2>Ingresa los Coeficientes</h2>
+                
+                <div class="coefficient-input" id="coefficients">
+                </div>
+                
+                <div class="buttons">
+                    <button id="evaluate-btn">Evaluar </button>
+                    <button id="clear-btn">Limpiar</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="results" id="results" style="display: none;">
+            <h2>Resultados</h2>
+            <div id="results-content">
+            </div>
+        </div>
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

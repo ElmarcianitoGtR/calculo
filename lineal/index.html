@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolvedor de Sistemas de Ecuaciones</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../bar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="nav-button" id="menuBtn" onclick="window.location.href = '../index.html'">
+            <i class="fas fa-bars"></i>
+            <span>Menú</span>
+        </button>
+        
+        <div class="logo">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+            <span class="logo-text">RAFAX</span>
+        </div>
+        
+        <button class="nav-button" id="profileBtn" onclick="window.location.href = '../main.html'">
+            <i class="fas fa-user"></i>
+            <span>Perfil</span>
+        </button>
+    </nav>
+    <div class="container">
+        <h1>Sistemas de Ecuaciones</h1>
+        
+        <div class="input-section">
+            <h2>Ingresa el sistema de ecuaciones</h2>
+            
+            <div id="equations-container" class="matrix-input">
+                <!-- Las ecuaciones se generarán aquí -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="solve-btn">Resolver</button>
+                <button id="clear-btn">Limpiar</button>
+            </div>
+            
+            <div id="error-message" class="error"></div>
+        </div>
+        
+        <div id="solution-section" class="solution-section" style="display: none;">
+            <h2>Solución del Sistema</h2>
+            <div id="steps-container">
+                <!-- Los pasos de solución se mostrarán aquí -->
+            </div>
+            
+            <div id="final-solution" class="solution">
+                <!-- La solución final se mostrará aquí -->
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+</html>

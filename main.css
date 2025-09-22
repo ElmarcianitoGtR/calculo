@@ -1,44 +1,31 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  line-height: 1.6;
+*{
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+
 }
-h1 {
-  color: #2c3e50;
-  text-align: center;
+
+.cont-gral{
+    
+    margin: auto;
+    margin-top: 20px;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
 }
-.ecuacion {
-  font-size: 1.2em;
-  margin: 15px 0;
-  text-align: center;
+
+a{
+    text-decoration: none;
+    color: black;
+    margin: auto;
 }
-.matriz-input {
-  width: 50px;
-  text-align: center;
-  margin: 0 5px;
-}
-.resultado {
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-  display: none;
-}
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 10px;
-}
-button:hover {
-  background-color: #2980b9;
-}
-.pasos {
-  margin-top: 20px;
+
+button{
+    width: 150px;
+    height: 40px;
+    margin:auto;
+    background-color: #ffffff00;
+    border: none;
 }

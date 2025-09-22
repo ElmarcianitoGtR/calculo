@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculo</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../bar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="nav-button" id="menuBtn" onclick="window.location.href = '../index.html'">
+            <i class="fas fa-bars"></i>
+            <span>Menú</span>
+        </button>
+        
+        <div class="logo">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+            <span class="logo-text">RAFAX</span>
+        </div>
+        
+        <button class="nav-button" id="profileBtn" onclick="window.location.href = '../main.html'">
+            <i class="fas fa-user"></i>
+            <span>Perfil</span>
+        </button>
+    </nav>
+    <h1>Método de Cramer para Sistemas 3x3</h1>
+
+    <p>Ingresa los valores de las ecuaciones:</p>
+
+    <form id="cramerForm">
+      <div class="ecuacion">
+        <input type="number" id="a1" class="matriz-input" required /> x +
+        <input type="number" id="b1" class="matriz-input" required /> y +
+        <input type="number" id="c1" class="matriz-input" required /> z =
+        <input type="number" id="d1" class="matriz-input" required />
+      </div>
+
+      <div class="ecuacion">
+        <input type="number" id="a2" class="matriz-input" required /> x +
+        <input type="number" id="b2" class="matriz-input" required /> y +
+        <input type="number" id="c2" class="matriz-input" required /> z =
+        <input type="number" id="d2" class="matriz-input" required />
+      </div>
+
+      <div class="ecuacion">
+        <input type="number" id="a3" class="matriz-input" required /> x +
+        <input type="number" id="b3" class="matriz-input" required /> y +
+        <input type="number" id="c3" class="matriz-input" required /> z =
+        <input type="number" id="d3" class="matriz-input" required />
+      </div>
+
+      <button type="button" onclick="calcularCramer()">Resolver</button>
+      <button type="reset">Limpiar</button>
+    </form>
+
+    <div id="resultado" class="resultado">
+      <h3>Resultados:</h3>
+      <p id="solucion"></p>
+    </div>
+  </body>
+</html>
